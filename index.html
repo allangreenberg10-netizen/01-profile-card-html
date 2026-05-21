@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Webpage</title>
+	<style>
+		:root {
+			--accent: #0ea5a4; /* teal */
+			--accent-2: #2563eb; /* blue */
+			--muted: #64748b;
+			--card-bg: #ffffff;
+			--section-bg: rgba(14,165,164,0.06);
+			--project-bg: linear-gradient(180deg, rgba(14,165,164,0.03), rgba(37,99,235,0.02));
+			--badge-bg: rgba(37,99,235,0.08);
+			--bg: #f0fbfb; /* page background color */
+		}
+		body { background-color: navy; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin: 0; background: var(--bg); color: #0f172a; }
+		main { background-color: #b3ecff; display: flex; align-items: stretch; justify-content: center; min-height: 100vh; }
+		article { width: 100%; min-height: 100vh; text-align: center; background: transparent; padding: 2.25rem; border-radius: 0; box-shadow: none; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+		figure { margin: 0; }
+		figure img { width: 180px; height: 180px; object-fit: cover; border-radius: 50%; box-shadow: 0 14px 30px rgba(2,6,23,0.12); display: inline-block; border: 4px solid rgba(14,165,164,0.12); }
+		h1 { margin: 0.6rem 0 0.25rem; font-size: 1.6rem; letter-spacing: 0.2px; color: var(--accent-2); }
+		h2 { margin: 0; font-size: 1.05rem; color: var(--muted); font-weight: 700; }
+		p { margin: 0.6rem 0 0; line-height: 1.6; color: #0f172a; max-width: 880px; }
+		section { margin-top: 0.9rem; width: 100%; max-width: 980px; }
+		h3 { margin: 0.5rem 0 0.75rem; font-size: 1.05rem; color: #0f172a; text-align: left; }
+		/* Tinted section backgrounds while keeping layout intact */
+		#section-2, #projects, #skills { background: var(--section-bg); padding: 1rem; border-radius: 10px; border-left: 4px solid var(--accent); }
+		ul { list-style: disc; padding-left: 1.25rem; margin: 0.5rem 0 0; color: #0f172a; text-align: left; }
+		.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+		.project-card { background: var(--card-bg); padding: 1rem; border-radius: 10px; box-shadow: 0 8px 20px rgba(15,23,42,0.06); text-align: left; transition: transform 180ms ease, box-shadow 180ms ease; }
+		.project-card h4 { margin: 0 0 0.5rem; font-size: 1rem; color: var(--accent-2); }
+		.project-card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+		.project-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.12); }
+		/* Skills badges */
+		#skills ul { padding-left: 0; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+		#skills ul li { list-style: none; background: var(--badge-bg); color: var(--accent-2); padding: 0.45rem 0.7rem; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
+		@media (min-width: 900px) {
+			article { padding: 3rem 4rem; }
+			p { font-size: 1rem; }
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<article>
+			<section id="profile">
+				<figure>
+					<img src="img/Allan Greenberg Headshot.png" alt="Allan Greenberg headshot" width="180" height="180" loading="lazy">
+				</figure>
+				<h1>Allan Greenberg</h1>
+				<h2>Medtronic Vascular Representative</h2>
+				<p>I have been in the vascular space for nearly 30 years, specializing in open and endovascular aortic therapy. I am also deeply involved in developing a vascular surgery medical mission training program for current attendings and future physicians.</p>
+			</section>
+			<section id="section-2" class="mission">
+				<h3>Mission</h3>
+				<p>Helping connect patients and care teams with endovascular solutions that make a real difference, especially for patients who would not normally have access to vascular care.</p>
+			</section>
+			<section id="projects">
+				<h3>Projects</h3>
+				<div class="projects-grid">
+					<div class="project-card">
+						<h4>Vascular Training Mission</h4>
+						<p>Developed curriculum and hands-on workshops for surgical teams working in low-resource settings.</p>
+					</div>
+					<div class="project-card">
+						<h4>Patient Access Initiative</h4>
+						<p>Coordinated outreach programs to improve referral pathways and device access for underserved communities.</p>
+					</div>
+					<div class="project-card">
+						<h4>Endovascular Outcomes Study</h4>
+						<p>Led data collection and analysis to measure long-term outcomes of new endovascular techniques.</p>
+					</div>
+				</div>
+			</section>
+			<section id="skills">
+				<h3>Skills</h3>
+				<ul>
+					<li>Open and endovascular aortic therapy</li>
+					<li>Medical mission program development</li>
+					<li>Patient access and care coordination</li>
+				</ul>
+			</section>
+		</article>
+	</main>
+</body>
+</html>
